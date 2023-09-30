@@ -1830,3 +1830,248 @@ responsive
   }
 
 }
+
+
+/* css footer from IT section start */
+
+.page-footer hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid #fff !important;
+}
+.foot-xs li {
+  margin-top: 0;
+}
+.text-lightgrey {
+  color: #727171 !important;
+}
+
+.text-lightgray {
+  color: #acacac;
+}
+.page-footer h5 {
+  color: #aea2a2 !important;
+}
+
+.page-footer a {
+  color: #fff !important;
+}
+
+.footer-copyright ul li {
+  list-style: none;
+  float: left;
+  padding: 20px;
+}
+.page-footer li {
+  margin-top: 10px;
+  list-style: circle;
+}
+
+.foot-xs li {
+  margin-top: 0;
+}
+
+.page-footer a:hover {
+  color: orangered !important;
+}
+
+.ait-edge .col-md-3:hover {
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.15) !important;
+}
+
+.mB-10 {
+  margin-bottom: 10px !important;
+}
+.text-lightgrey {
+  color: #727171 !important;
+}
+
+.text-lightgray {
+  color: #acacac;
+}
+.text-white {
+  color: #fff;
+}
+.pad-10 {
+  padding: 10px;
+}
+.pad-20 {
+  padding: 20px;
+}
+.font-bold {
+  font-weight: bold;
+}
+.d-flex {
+  display: flex;
+}
+
+.d-flex-center {
+  display: flex;
+  align-items: center;
+}
+
+.d-flex-0 {
+  display: flex;
+  flex: 1;
+}
+.font-12 {
+  font-size: 12px;
+}
+.font-20 {
+  font-size: 20px;
+}
+.social-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.social-icons ul {
+  margin: 0px !important;
+  padding: 0px !important;
+}
+
+.social-icons ul li {
+  list-style: none;
+  float: left;
+  margin: 3px;
+}
+
+.social-icons ul li a {
+  color: black !important;
+  display: inline-block;
+  position: relative;
+  margin: 0 auto;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  font-size: 20px;
+  padding: 6px;
+}
+
+.social-icons [class*="fa"] {
+  transition-property: transform, color;
+  transition-duration: 0.8s;
+  -webkit-transition-property: -webkit-transform, color;
+  -webkit-transition-duration: 0.8s;
+  -ms-transition-property: -ms-transform, color;
+  -ms-transition-duration: 0.8s;
+}
+
+.social-icons li a:hover [class*="fa"] {
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  color: #fff;
+}
+
+.social-icons ul li .icoFacebook:hover {
+  background: #3b5998;
+}
+
+.social-icons ul li .icoLinkedin:hover {
+  background: #0e76a8;
+}
+
+.social-icons ul li .iconTwitter:hover {
+  background: #00acee;
+}
+
+.social-icons ul li .iconPinterest:hover {
+  background: #c8232c;
+}
+
+.social-icons ul li .iconYoutube:hover {
+  background: #ff0000;
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+.col-sm-6 {
+      flex: 0 0 50%;
+      min-width: 50%;
+      max-width: 50%;
+  }
+.col-sm-6 {
+      min-width: 50%;
+  }
+.col-sm-12 {
+      min-width: 100%;
+  }
+.home-reviews .col-md-4 {
+      margin: 20px 0px 0px 0px;
+      min-width: 100%;
+      box-shadow: none !important;
+  }
+.home-reviews .col-md-4 {
+      margin: 20px 0px 0px 0px;
+      min-width: 100%;
+      box-shadow: none !important;
+  }
+.home-reviews .col-md-4 h5 {
+      font-size: 15px;
+  }
+  .col-sm-12 {
+      min-width: 100%;
+  }
+  }
+@media only screen and (max-width: 600px) {
+   .text-justify-xs {
+      text-align: justify !important;
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .col-sm-6 {
+      flex: 0 0 50%;
+      min-width: 50%;
+      max-width: 50%;
+  }
+.copy-rights {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+  }
+.col-sm-6 {
+      min-width: 50%;
+  }
+.footer-copyright {
+      margin-bottom: 6% !important;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .social-icons ul li {
+      margin: 3px 5px;
+      padding: 0px;
+  }
+  .position {
+      right: -4% !important;
+  }
+  .position .turned-button {
+      font-size: 17px !important;
+  }
+  .price-cut {
+      right: 98px !important;
+  }
+}
+@media only screen and (max-width: 600px) {
+ .footer-copyright ul li {
+      padding: 8px;
+  }
+
+.foot-xs {
+      text-align: center;
+      justify-content: center;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0 !important;
+  }
+  hr {
+      border-top: 1px solid #fff;
+  }
+  .text-justify-xs {
+      text-align: justify !important;
+  }
+}
