@@ -2,7 +2,19 @@
 /*
 # Gallery
 --------------------------------*/
+ .entry-title{
+    line-height: 80px;
+  margin-top: 0px;
+  margin-bottom: 50px; 
+  padding-bottom: 0px;
+  
+  border-bottom: 1px solid  #150202;
  
+  font-size: 22px ;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #150202;
+ }
 
 .gallery-grid:hover img{
     transform: scale(1.5);

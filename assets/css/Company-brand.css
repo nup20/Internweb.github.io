@@ -1,0 +1,291 @@
+/* Company logo Section Starts here*/
+
+
+.client {
+    margin-bottom: 5rem;
+    margin-top: 3rem;
+    float: left;
+    width: 100%;
+    overflow:hidden;
+  }
+  
+  
+  @media (min-width:992px) and (max-width:1024.9px) {
+  .client {
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+        float: left;
+        width: 100%;
+    }
+  }
+  
+  @media (min-width:768px) and (max-width:991.9px) {
+  .client {
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+        float: left;
+        width: 100%;
+    }
+  }
+  
+  @media (min-width:576px) and (max-width:767.9px) {
+  .client {
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+        float: left;
+        width: 100%
+    }
+  }
+  
+  @media (min-width:481px) and (max-width:575.9px) {
+  .client {
+        margin-bottom: 1rem;
+        margin-top: 3rem;
+        float: left;
+        width: 100%
+    }
+  }
+  @media (min-width:360px) and (max-width:480.9px) {
+  .client {
+        margin-bottom: 1rem;
+        margin-top: 3rem;
+        float: left;
+        width: 100%
+    }
+  }
+  
+  @media (min-width:320px) and (max-width:359.9px) {
+  .client {
+        margin-bottom: 1rem;
+        margin-top: 3rem;
+        float: left;
+        width: 100%
+    }
+  }
+  
+  
+  
+  .nav-container {
+    width: 40%;
+    float: left
+  }
+  
+  .nav-container .slick-current img {
+    box-shadow: 0 0 4px 2px rgba(108, 232, 220, .9)
+  }
+  
+  .main-container {
+    width: 52%;
+    float: left
+  }
+  
+  .nav-container img {
+    max-height: 135px
+  }
+  
+  .nav-container .slick-slide {
+    max-height: 135px;
+    margin-bottom: 18px
+  }
+  
+  /*
+  .responsive-svg {
+    max-width: 100%;
+    height: auto
+  }
+  
+  @media (min-width:1025px) and (max-width:1199.9px) {
+  .responsive-svg {
+        max-width: 100%;
+        height: auto;
+        padding: 1rem
+    }
+  }
+  
+  @media (min-width:992px) and (max-width:1024.9px) {
+  .responsive-svg {
+        max-width: 100%;
+        height: auto;
+        padding: 3rem 0
+    }
+  }
+  
+  @media (min-width:768px) and (max-width:991.9px) {
+  .responsive-svg {
+        max-width: 100%;
+        height: auto;
+        padding: 4rem
+    }
+  }
+  
+  @media (min-width:360px) and (max-width:480.9px) {
+  .responsive-svg {
+        max-width: 90%;
+        height: auto;
+        padding: 0
+    }
+  }
+  @media (min-width:320px) and (max-width:359.9px) {
+  .responsive-svg {
+        max-width: 90%;
+        height: auto;
+        padding: 0
+    }
+  }
+  */
+  .responsive__tabs ul.scroll-tabs {
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    text-transform: uppercase;
+    flex-direction: row
+  }
+  
+  .responsive__tabs ul.scroll-tabs li {
+    list-style-type: none
+  }
+  
+  .responsive__tabs ul.scroll-tabs li a {
+    border: 1px solid #ddd;
+    margin: 0 12px;
+    border-radius: 25px;
+    font-size: 12px;
+    text-decoration: none;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9px 22px
+  }
+  
+  .responsive__tabs ul.scroll-tabs li a.active {
+    background: #f3f6f8;
+    font-weight: 600
+  }
+  
+  .responsive__tabs ul.scroll-tabs li a img {
+    filter: invert(79%) sepia(0) saturate(2265%) hue-rotate(343deg) brightness(83%) contrast(88%);
+    vertical-align: middle;
+    padding-right: 7px
+  }
+  
+  @media (min-width:320px) and (max-width:479.9px) {
+  .responsive__tabs ul.scroll-tabs li a {
+        border: 1px solid #ddd;
+        margin: 0 8px;
+        border-radius: 25px;
+        font-size: 12px;
+        text-decoration: none;
+        color: #000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5px 16px
+    }
+  }
+  
+  
+  .jss899 {
+    filter: grayscale(1);
+    opacity: .5
+  }
+  
+  .jss899:hover {
+    filter: grayscale(0);
+    opacity: 1
+  }
+  
+  
+  /* .col-lg-12, .col-md-12, .col-sm-12, .col-xl-12
+  {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  } */
+  
+   /* @media(min-width:576px){
+  .col-sm-12{
+    flex: 0 0 100%;
+    max-width: 100%;
+  } 
+  } */
+  .slick-slider{
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select:none;
+    -ms-touch-action: pan-y;
+    -webkit-tap-highlight-color:transparent;
+  
+  }
+  
+  
+  .section
+  {
+  display:block;
+  }
+  .section
+  {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-allign: baseline;
+  }
+  
+  *,::after, ::before{
+  box-sizing: border-box;
+  }
+  .slick-slide img
+  {
+    width: 100px;
+  }
+  
+  
+  
+  
+  
+  /* .slide-container{
+    display: flex;
+    width: calc(250px * 18);
+    animation: scroll 20s linear infinite;
+  }
+  @keyframes scroll {
+    0%{
+      transform: translateX(0);
+    }
+    100%{
+      transform: translateX(calc(250px * 9));
+    }
+  } */
+  
+  
+  
+  .slide-container {
+    display: flex;
+    width: calc(250px * 13); /* Adjusted the number of slides */
+    animation: scroll 20s linear infinite;
+    overflow: hidden; /* Added to hide overflow */
+    scroll-behavior: smooth;
+  }
+  
+  .slide {
+    width: 250px; /* Adjusted slide width */
+    flex-shrink: 0; /* Prevents flexbox from resizing the slides */
+    box-sizing: border-box; /* Ensures the border doesn't increase width */
+  }
+  
+  @keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-250px * 6)); /* Adjusted translate value */
+    }
+  }
+  /*Company logo Section End here */
