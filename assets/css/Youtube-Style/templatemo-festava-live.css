@@ -56,11 +56,11 @@ article a {
     display: inline-flex;
     align-items: center;
     text-decoration: none;
-    color: #28666e;
+    color: #f5a425;
 }
 
 article a:focus {
-    outline: 1px dotted #28666e;
+    outline: 1px dotted f5a425;
 }
 
 article a .icon {
@@ -78,7 +78,7 @@ article a .icon {
 article:has(:hover,
 :focus) {
     --img-scale: 1.1;
-    --title-color: #28666e;
+    --title-color: #f5a425;
     --link-icon-translate: 0;
     --link-icon-opacity: 1;
 }

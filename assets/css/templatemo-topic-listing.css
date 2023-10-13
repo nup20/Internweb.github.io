@@ -1,48 +1,11 @@
-
 /*---------------------------------------
   CUSTOM PROPERTIES ( VARIABLES )             
 -----------------------------------------*/
-:root {
-  --white-color:                  #ffffff;
-  --primary-color:                #13547a;
-  --secondary-color:              #80d0c7;
-  --section-bg-color:             #f0f8ff;
-  --custom-btn-bg-color:          #394342;
-  --custom-btn-bg-hover-color:    #13547a;
-  --dark-color:                   #000000;
-  --p-color:                      #717275;
-  --border-color:                 #7fffd4;
-  --link-hover-color:             #13547a;
-
-  --body-font-family:             'Poppins', sans-serif;
-  --title-font-family:            'Poppins', sans-serif;
-
-  --h1-font-size:                 58px;
-  --h2-font-size:                 46px;
-  --h3-font-size:                 32px;
-  --h4-font-size:                 28px;
-  --h5-font-size:                 24px;
-  --h6-font-size:                 22px;
-  --p-font-size:                  20px;
-  --menu-font-size:               14px;
-  --btn-font-size:                18px;
-  --copyright-font-size:          16px;
-
-  --border-radius-large:          100px;
-  --border-radius-medium:         20px;
-  --border-radius-small:          10px;
-
-  --font-weight-normal:           400;
-  --font-weight-medium:           500;
-  --font-weight-semibold:         600;
-  --font-weight-bold:             700;
-}
 
 body {
-  background-color: var(--white-color);
-  font-family: var(--body-font-family); 
+  background-color: #ffffff;
+  font-family: 'Poppins', sans-serif; 
 }
-
 
 /*---------------------------------------
   SECTION               
@@ -54,7 +17,7 @@ body {
 }
 
 .section-bg {
-  background-color: var(--section-bg-color);
+  background-color: #f0f8ff;
 }
 
 .section-overlay {
@@ -73,8 +36,8 @@ body {
 }
 
 .tab-content {
-  background-color: var(--white-color);
-  border-radius: var(--border-radius-medium);
+  background-color: #ffffff;
+  border-radius: 100px;
 }
 
 .nav-tabs {
@@ -88,10 +51,10 @@ body {
   border-top: 0;
   border-right: 0;
   border-left: 0;
-  color: var(--p-color);
-  font-family: var(--title-font-family);
-  font-size: var(--btn-font-size);
-  font-weight: var(--font-weight-medium);
+  color: #717275;
+  font-family: 'Poppins', sans-serif;
+  font-size: 8px;
+  font-weight: 500;
   padding: 15px 25px;
   transition: all 0.3s;
 }
@@ -104,30 +67,29 @@ body {
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-link:focus, 
 .nav-tabs .nav-link:hover {
-  border-bottom-color: var(--primary-color);
-  color: var(--primary-color);
+  border-bottom-color: #f5a425;
+  color: #f5a425;
 }
-
 
 /*---------------------------------------
   CUSTOM BUTTON               
 -----------------------------------------*/
 
 .custom-btn:hover {
-  background: var(--custom-btn-bg-hover-color);
-  color: var(--white-color);
+  background: #13547a;
+  color: #ffffff;
 }
 
 .custom-border-btn {
   background: transparent;
-  border: #d24fe6/*2px solid var(--custom-btn-bg-color)*/;
-  color:#ce93e2/* var(--custom-btn-bg-color)*/;
+  border: #d24fe6;
+  color: #ce93e2;
 }
 
 .custom-border-btn:hover {
-  background:#F5a425 /*var(--custom-btn-bg-color)*/;
+  background: #f5a425;
   border-color: transparent;
-  color: var(--white-color);
+  color: #ffffff;
 }
 
 /*---------------------------------------
@@ -151,7 +113,7 @@ body {
 .timeline-container .vertical-scrollable-timeline .list-progress {
   width: 8px;
   height: 87%;
-  background-color: gray/*var(--primary-color)*/;
+  background-color: grey;
   position: absolute;
   left: 52px;
   top: 0;
@@ -163,7 +125,7 @@ body {
   right: 0;
   bottom: 0;
   height: 100%;
-  background-color: #b586c5 /*var(--secondary-color)*/;
+  background-color: #3a0436;
   width: 100%;
 }
 
@@ -193,7 +155,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #b586c5 /*var(--secondary-color)*/;
+  background-color: #3a0436;
   border-radius: 50%;
   z-index: 1;
   transition: 0.4s all;
@@ -205,7 +167,7 @@ body {
   height: 80px;
   border: 4px solid #fff;
   position: absolute;
-  background-color: rgb(0 0 0 / 25%) /*var(--secondary-color)*/;
+  background-color: rgb(0 0 0 / 25%);
   border-radius: 50%;
   z-index: -1;
   transition: 0.4s all;
@@ -213,7 +175,7 @@ body {
 
 .timeline-container .vertical-scrollable-timeline li .icon-holder i {
   font-size: 25px;
-  color: var(--white-color);
+  color: #ffffff;
 }
 
 .timeline-container .vertical-scrollable-timeline li::before {
@@ -227,13 +189,12 @@ body {
 }
 
 .timeline-container .vertical-scrollable-timeline li.active .icon-holder {
-  background-color: gray/*var(--primary-color)*/;
+  background-color: grey;
 }
 
 .timeline-container .vertical-scrollable-timeline li.active .icon-holder::before {
-  background-color: gray/*var(--primary-color)*/;
+  background-color: grey;
 }
-
 
 /*---------------------------------------
   FAQs              
@@ -244,26 +205,28 @@ body {
 }
 
 .faq-section .accordion-button {
-  font-size: var(--h6-font-size);
-  font-weight: var(--font-weight-semibold);
+  font-size: 18px;
+  font-weight: 600;
+  font-family: 'poppins',sans-serif;
 }
 
 .faq-section .accordion-item:first-of-type .accordion-button {
-  border-radius: var(--border-radius-large);
+  border-radius: 100px;
 }
 
 .faq-section .accordion-button:not(.collapsed) {
-  border-radius: var(--border-radius-large);
+  border-radius: 100px;
   box-shadow: none;
-  color: var(--primary-color);
+  color: #f5a425;
 }
 
 .faq-section .accordion-body {
-  color: var(--p-color);
-  font-size: var(--btn-font-size);
+  color: #717275;
+  font-size: 14px;
   line-height: 40px;
-  height:auto
+  height: auto;
 }
+
 /*---------------------------------------
   RESPONSIVE STYLES               
 -----------------------------------------*/
@@ -273,7 +236,8 @@ body {
   }
 
   h2 {
-    font-size: 36px;
+    font-size: 18px;
+    font-family: 'poppins',sans-serif;
   }
 
   h3 {
@@ -296,9 +260,9 @@ body {
     padding-top: 50px;
     padding-bottom: 50px;
   }
-  
+
   .navbar {
-    background-color: var(--secondary-color);
+    background-color: #80d0c7;
   }
 
   .navbar-nav .dropdown-menu {
@@ -324,58 +288,10 @@ body {
   }
 
   .nav-tabs .nav-link {
-    font-size: var(--copyright-font-size);
+    font-size: 16px;
     padding: 10px;
   }
 
   .featured-section {
-    border-radius: 0 0 80px 80px;
-    padding-bottom: 50px;
-  }
-
-  .custom-block-topics-listing .custom-block-image {
-    width: auto;
-  }
-
-  .custom-block-topics-listing > .d-flex,
-  .custom-block-topics-listing-info,
-  .custom-block-topics-listing a {
-    flex-direction: column;
-  }
-
-  .timeline-container .vertical-scrollable-timeline .list-progress {
-    height: 75%;
-  }
-
-  .timeline-container .vertical-scrollable-timeline li {
-    padding-left: 135px;
-  }
-
-  .subscribe-form-wrap {
-    padding-top: 30px;
-    padding-bottom: 0;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  h1 {
-    font-size: 36px;
-  }
-
-  h2 {
-    font-size: 28px;
-  }
-
-  h3 {
-    font-size: 26px;
-  }
-
-  h4 {
-    font-size: 22px;
-  }
-
-  h5 {
-    font-size: 20px;
-  }
-}
-
+    border-radius: 0 0 80px 80px
+  }}
