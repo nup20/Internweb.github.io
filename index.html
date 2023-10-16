@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="assets/css/templatemo-edu-meeting.css">
     <link rel="stylesheet" href="assets/css/owl.css">
     <link rel="stylesheet" href="assets/css/lightbox.css">
+    <link rel="stylesheet" href="css/Popup/popup.css"><!---popup form cs------->
 
 <!--CSS FILES -->        
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -108,7 +109,7 @@ TemplateMo 569 Edu Meeting
               <li><a href="https://www.instagram.com/asterisc.in/"><i class="fa fa-instagram"></i></a></li>
               <li><a href="https://www.facebook.com/asterisccomputer/"><i class="fa fa-facebook"></i></a></li>
               <li><a href="https://twitter.com/Asterisc"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="https://in.pinterest.com/Achieversittrainings/"><i class="fa fa-github"></i></a></li>
+              <li><a href="https://github.com/Asterisc-Institute"><i class="fa fa-github"></i></a></li>
             </ul>
           </div>
         </div>
@@ -148,6 +149,31 @@ TemplateMo 569 Edu Meeting
       </div>
   </header>
   <!-- ***** Header Area End ***** -->
+  <!---Script of Main Banner Area start-->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var caption = document.querySelector('.main-banner .caption h2');
+  var text = caption.innerText;
+  caption.innerText = '';
+
+  function typeText(index) {
+      if (index < text.length) {
+          if (text[index] === ' ') {
+              caption.innerHTML += '&nbsp;'; // Replace space with non-breaking space
+          } else {
+              caption.innerHTML += text[index];
+          }
+          index++;
+          setTimeout(function() {
+              typeText(index);
+          }, 500); // Adjust the typing speed by changing the second argument (in milliseconds)
+      }
+  }
+
+  typeText(0);
+});
+</script>
+<!---Script of Main Banner Area end-->
 
   <!-- ***** Main Banner Area Start ***** -->
   <section class="section main-banner" id="top" data-section="section1" style="padding-top:0px; margin-top: 0px;">
@@ -258,11 +284,31 @@ TemplateMo 569 Edu Meeting
              <li><a href="#">Acquire On-the-Job Experience.</a></li>
              <li><a href="#">Career path exploration </a></li>
             </ul>
-            <div class="main-button-red">
-              <a href="meetings.html">Download PDF</a>
+            <div class="main-button-purple" id="myBtn">
+              <p>Download PDF</p>
+              
             </div>
           </div>
         </div>
+
+         <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2> Form</h2>
+          <form action="Internlogin1.php" method="post">
+            <h5 style="color: green;">
+              name: <input type="text" name="Iname"><br><br>
+                email:<input type="text" name="Iemail"><br><br>
+                Phone no:<input type="text" name="Iphno"><br><br>
+              <input type="submit" value="Submit">
+            </h5>
+          </form>
+      </div>
+
+  </div>
         <div class="col-lg-8">
           <div class="row">
             <div class="col-lg-6">
@@ -1514,7 +1560,7 @@ TemplateMo 569 Edu Meeting
             <li><a href="https://www.instagram.com/asterisc.in/" rel="nofollow" class="icoFacebook" title="Instagram" target="_blank"><i class="fa fa-instagram"></i></a></li>
             <li><a href="https://www.facebook.com/asterisccomputer/" rel="nofollow" class="icoFacebook" title="Facebook" target="_blank"><i class="fa fa-facebook-f "></i></a></li>
              <li><a href="https://twitter.com/Asterisc" class="iconTwitter" title="Twitter" rel="nofollow" target="_blank"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="https://in.pinterest.com/Achieversittrainings/" class="iconPinterest" rel="nofollow" title="Pinterest" target="_blank"><i class="fa fa-github"></i></a></li>
+            <li><a href="https://github.com/Asterisc-Institute" class="iconPinterest" rel="nofollow" title="Pinterest" target="_blank"><i class="fa fa-github"></i></a></li>
               
           </ul>
       </div>
@@ -1556,6 +1602,7 @@ TemplateMo 569 Edu Meeting
   <!---===========Form===========-->
   <!-- Scripts -->
   <!-- Bootstrap core JavaScript -->
+  <script src="css/Popup/popupform.js"></script><!-----popup form js-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="vendor/bootstrap/Bootstrap/bootstrap-icons.woff"></script>
