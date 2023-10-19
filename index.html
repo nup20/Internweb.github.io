@@ -298,13 +298,21 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="modal-content">
           <span class="close">&times;</span>
           <h2> Form</h2>
-          <form action="Internlogin1.php" method="post">
-            <h5 style="color: green;">
-              name: <input type="text" name="Iname"><br><br>
-                email:<input type="text" name="Iemail"><br><br>
-                Phone no:<input type="text" name="Iphno"><br><br>
-              <input type="submit" value="Submit">
-            </h5>
+          <form action="Internlogin1.php" method="post" style="background-color: rgb(223, 198, 176);" >
+            <a style="color: green;">
+              <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+                <label for="countryCode">Country Code:</label>
+                <input type="search" id="countryCode" name="countryCode" required><br><br>
+                <label for="phoneNumber">Phone Number:</label>
+                <input type="tel" id="phoneNumber" name="phoneNumber" required pattern="[0-9]{10}"><br><br>
+              </a>
+                <button type="button" id="generateOTP">Generate OTP</button><br><br>
+                <label for="otp">Enter OTP:</label>
+                <input type="text" id="otp" name="otp" required><br><br>
+                <button type="button" id="verifyOTP">Verify OTP</button><br><br>
+                <input type="submit" value="Submit">
+             
           </form>
       </div>
 
