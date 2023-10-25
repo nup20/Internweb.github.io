@@ -14,6 +14,7 @@
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="popupform/main.css"><!----Popup firebase form css file------->
 
     <!-- Additional CSS Files -->
     <link rel="stylesheet" href="assets/css/Youtube-Style/bootstrap-icons.css"><!----Linkedin css file------->
@@ -124,20 +125,20 @@ TemplateMo 569 Edu Meeting
               <div class="col-12">
                   <nav class="main-nav">
                       <!-- ***** Logo Start ***** -->
-                      <a href="index.html" class="logo">
+                      <a href="index.php" class="logo">
                           Asterisc Technocrat
                       </a>
                       <!-- ***** Logo End ***** -->
                       <!-- ***** Menu Start ***** -->
                       <ul class="nav">
-                        <ul class="nav">
-                          <li ><a href="index.html" class="active">Home</a></li>
-                          <li><a href="meeting-details.html">opportunities</a></li>
+                        
+                          <li ><a href="index.php" class="active">Home</a></li>
+                          <li><a href="meeting-details.php">opportunities</a></li>
                           <li class="scroll-to-section"><a href="#apply">Apply Now</a></li>
-                          <li><a href="ourgallary-o.html">Our Gallary</a></li>
+                          <li><a href="ourgallary-o.html">Our Galldery</a></li>
                           <li class="scroll-to-section"><a href="#courses">Courses</a></li> 
                           <li class="scroll-to-section"><a href="#contact">Contact Us</a></li> 
-                      </ul>       
+                         
                       </ul>        
                       <a class='menu-trigger'>
                           <span>Menu</span>
@@ -284,39 +285,100 @@ document.addEventListener('DOMContentLoaded', function() {
              <li><a href="#">Acquire On-the-Job Experience.</a></li>
              <li><a href="#">Career path exploration </a></li>
             </ul>
-            <div class="main-button-purple" id="myBtn">
+            <div class="main-button-purple" id="openPopupBtn">
               <p>Download PDF</p>
               
-            </div>
+            
+           </div>
           </div>
         </div>
 
-         <!-- The Modal -->
-    <div id="myModal" class="modal">
+ <div id="popupFormContainer">
+        <div class="popupForm">
+            <span class="close">&times;</span>
+            <form>
+                <form action="verification.php">
+                    <h1>Firebase Phone verification In PHP</h1>
+                    <div class="formcontainer">
+                    <hr/>
+                    <div class="container">
+                      <label for="uname"><strong>Phone Number</strong></label>
+                      <input type="text" id="number" placeholder="Enter phone number" name="uname" required>
+                    </div>
+                    <div id="recaptcha-container"></div>
+                    <button type="button" onclick="phoneAuth();">Send Otp</button>
+                  
+                  </form>
+              
+                  <form>
+                       <div class="container">
+                      <label for="uname"><strong>verification number</strong></label>
+                      <input type="text" id="verificationCode" placeholder="Enter otp" name="uname" required>
+                      
+                       </div>
+                      <button type="button" onclick="codeverify();">submit</button>
+                  </form>
+            </form>
+        </div>
+    </div>
 
-      <!-- Modal content -->
-      <div class="modal-content">
-          <span class="close">&times;</span>
-          <h2> Form</h2>
-          <form action="Internlogin1.php" method="post" style="background-color: rgb(223, 198, 176);" >
-            <a style="color: green;">
-              <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required><br><br>
-                <label for="countryCode">Country Code:</label>
-                <input type="search" id="countryCode" name="countryCode" required><br><br>
-                <label for="phoneNumber">Phone Number:</label>
-                <input type="tel" id="phoneNumber" name="phoneNumber" required pattern="[0-9]{10}"><br><br>
-              </a>
-                <button type="button" id="generateOTP">Generate OTP</button><br><br>
-                <label for="otp">Enter OTP:</label>
-                <input type="text" id="otp" name="otp" required><br><br>
-                <button type="button" id="verifyOTP">Verify OTP</button><br><br>
-                <input type="submit" value="Submit">
-             
-          </form>
-      </div>
+    <script>
+        // Get the popup form container
+var popupFormContainer = document.getElementById("popupFormContainer");
 
-  </div>
+// Get the button that opens the popup form
+var openPopupBtn = document.getElementById("openPopupBtn");
+
+// Get the close button in the popup form
+var closeBtn = document.querySelector(".close");
+
+// Function to open the popup form
+function openPopupForm() {
+    popupFormContainer.style.display = "block";
+}
+
+// Function to close the popup form
+function closePopupForm() {
+    popupFormContainer.style.display = "none";
+}
+
+// Event listeners
+openPopupBtn.addEventListener("click", openPopupForm);
+closeBtn.addEventListener("click", closePopupForm);
+window.addEventListener("click", function(event) {
+    if (event.target === popupFormContainer) {
+        closePopupForm();
+    }
+});
+
+    </script>
+
+
+
+<script src= "https://www.gstatic.com/firebasejs/10.5.0/firebase.js"></script>
+    <script src= "https://www.gstatic.com/firebasejs/10.5.0/firebase-analytics.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase.js"></script>
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyA9PlXPs0nKb0Ef338rP5-MmGsqz0gRbUE",
+      authDomain: "otp-v-4dad2.firebaseapp.com",
+      projectId: "otp-v-4dad2",
+      storageBucket: "otp-v-4dad2.appspot.com",
+      messagingSenderId: "1002501064669",
+      appId: "1:1002501064669:web:f67bf1619caace67e01834",
+      measurementId: "G-Y3B1QVHS54"
+    };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+     firebase.analytics();
+</script>
+    <script src="popupform/firebase.js" type="text/javascript"></script>
+
+    <div class>
+  
         <div class="col-lg-8">
           <div class="row">
             <div class="col-lg-6">
@@ -324,28 +386,87 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="thumb">
                   <div class="price">
                     <span>&#8377; 1000/-</span>
+                    <?php
+$price = '&#8377; 1000/-'; // This is the data you want to send to meetingdetails.php
+?>
+            
                   </div>
                   <a href="meeting-details.html"><img src="assets/images/Training-img/Tra-1.jpeg" alt="New Lecturer Meeting"></a>
                 </div>
                 <div class="down-content">
                   <div class="date">
-                    <h6>Nov <span>10</span></h6>
+                  <?php
+$training = ' 1 Week Training'; // This is the data you want to send to meetingdetails.php
+?>
+                    <!-- Include your JavaScript script in the HTML -->
+                    <?php
+$currentMonth = date("n"); // Get the current month as a number (1-12)
+$currentYear = date("Y");   // Get the current year
+
+// Set the target month and day for 1-month training
+$targetMonth = 11; // November
+$targetDay = 4;
+
+// Calculate the next occurrence of the target date
+if ($currentMonth > $targetMonth || ($currentMonth == $targetMonth && date("j") > $targetDay)) {
+    $nextOccurrenceYear = $currentYear + 1; // Go to the next year if the target date has passed
+} else {
+    $nextOccurrenceYear = $currentYear;
+}
+
+$nextOccurrenceMonth = date("M", strtotime("$nextOccurrenceYear-$targetMonth-$targetDay"));
+$nextOccurrenceDay = date("d", strtotime("$nextOccurrenceYear-$targetMonth-$targetDay"));
+ $price = $price; 
+ $training=$training;
+// // Construct the URL with query parameters
+
+// $meetingDetailsURL = "meeting-details.php?month=" . $nextOccurrenceMonth . "&day=" . $nextOccurrenceDay . "&price=" . $price . "&training=" . $training;
+
+?>
+
+
+
+                    <!-- <h6>Nov <span>10</span></h6> -->
+                   
+                    <h6>
+                      <?php echo $nextOccurrenceMonth; ?> <span><?php echo $nextOccurrenceDay; ?></span>
+                    </h6>
                   </div>
-                  <a href="meeting-details.html"><h4>1 Week Training</h4></a>
-                  <p>Training Days:4<br>Project Devlopment Days:3</p>
+                  <!-- <a href="meeting-details.html"><h4>1 Week Training</h4></a> -->
+                  <a href="meeting-details.html"><h4><?php echo $training; ?></h4></a>
+                 
+                  <p>Training Days: 4<br>Project Devlopment Days: 3</p>
                    
                   <!--Know more-->
                 <article style="background-color: none; box-shadow: none;">
                   <div class="article-wrapper">
                       
                       <div class="article-body">
-                        
-                          <a href="meeting-details.html" class="read-more">
+                     
+                          <!-- <a href="<?php echo $meetingDetailsURL; ?>" class="read-more">
                   Know more <span class="sr-only">about this is some title</span>
                   <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
                   </svg>
-                </a>
+                </a> -->
+
+                <style>
+  .read-more-button {
+  display: inline-block;
+  background-color: transparent;
+  border: none;
+  color: #f5a425;
+  text-decoration: none;
+  cursor: pointer;
+}
+                </style>
+                <form action="meeting-details.php" method="post">
+    <input type="hidden" name="month" value="<?php echo $nextOccurrenceMonth; ?>">
+    <input type="hidden" name="day" value="<?php echo $nextOccurrenceDay; ?>">
+    <input type="hidden" name="price" value="<?php echo $price; ?>">
+    <input type="hidden" name="training" value="<?php echo $training; ?>">
+    <input type="submit" value="Know more" class="read-more-button" style="color: #F5A425">
+</form>
                       </div>
                   </div>
               </article>
@@ -359,12 +480,44 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="thumb">
                   <div class="price">
                     <span>&#8377; 3000/-</span>
+                    <?php
+$price = '&#8377; 3000/-'; // This is the data you want to send to meetingdetails.php
+?>
                   </div>
                   <a href="meeting-details.html"><img src="assets/images/Training-img/Tra-2.jpeg" alt="Online Teaching"></a>
                 </div>
                 <div class="down-content">
                   <div class="date">
-                    <h6>Nov <span>24</span></h6>
+                  <?php
+$training = ' 1 Month Training'; // This is the data you want to send to meetingdetails.php
+?>
+                    <!-- <h6>Nov <span>24</span></h6> -->
+                    <?php
+$currentMonth = date("n"); // Get the current month as a number (1-12)
+$currentYear = date("Y");   // Get the current year
+
+// Set the target month and day for 1-month training
+$targetMonth = 11; // November
+$targetDay = 11;
+
+// Calculate the next occurrence of the target date
+if ($currentMonth > $targetMonth || ($currentMonth == $targetMonth && date("j") > $targetDay)) {
+    $nextOccurrenceYear = $currentYear + 1; // Go to the next year if the target date has passed
+} else {
+    $nextOccurrenceYear = $currentYear;
+}
+
+$nextOccurrenceMonth = date("M", strtotime("$nextOccurrenceYear-$targetMonth-$targetDay"));
+$nextOccurrenceDay = date("d", strtotime("$nextOccurrenceYear-$targetMonth-$targetDay"));
+$price = $price; 
+$training =$training;
+// Construct the URL with query parameters
+$meetingDetailsURL = "meeting-details.php?month=" . $nextOccurrenceMonth . "&day=" . $nextOccurrenceDay . "&price=" . $price . "&training=" . $training;
+
+
+?>
+<h6><?php echo $nextOccurrenceMonth; ?> <span><?php echo $nextOccurrenceDay; ?></span></h6>
+
                   </div>
                   <a href="meeting-details.html"><h4>1 Month Training</h4></a>
                   <p>Training Days:6<br>Project Devlopment Days:24</p>
@@ -374,12 +527,19 @@ document.addEventListener('DOMContentLoaded', function() {
                       
                       <div class="article-body">
                         
-                          <a href="meeting-details.html" class="read-more">
+                          <!-- <a href="<?php echo $meetingDetailsURL; ?>" class="read-more">
                   Know more <span class="sr-only">about this is some title</span>
                   <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
                   </svg>
-                </a>
+                </a> -->
+                <form action="meeting-details.php" method="post">
+    <input type="hidden" name="month" value="<?php echo $nextOccurrenceMonth; ?>">
+    <input type="hidden" name="day" value="<?php echo $nextOccurrenceDay; ?>">
+    <input type="hidden" name="price" value="<?php echo $price; ?>">
+    <input type="hidden" name="training" value="<?php echo $training; ?>">
+    <input type="submit" value="Know more" class="read-more-button" style="color: #F5A425">
+</form>
                       </div>
                   </div>
               </article>
@@ -392,12 +552,44 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="thumb">
                   <div class="price">
                     <span>&#8377; 9000/-</span>
+                    <?php
+$price = '&#8377; 9000/-'; // This is the data you want to send to meetingdetails.php
+?>
                   </div>
                   <a href="meeting-details.html"><img src="assets/images/Training-img/Tra-3.jpeg" alt="Higher Education"></a>
                 </div>
                 <div class="down-content">
                   <div class="date">
-                    <h6>Nov <span>26</span></h6>
+                  <?php
+$training = ' 3 Month Training'; // This is the data you want to send to meetingdetails.php
+?>
+                  <?php
+$currentMonth = date("n"); // Get the current month as a number (1-12)
+$currentYear = date("Y");   // Get the current year
+
+// Set the target month and day for 1-month training
+$targetMonth = 11; // November
+$targetDay = 18;
+
+// Calculate the next occurrence of the target date
+if ($currentMonth > $targetMonth || ($currentMonth == $targetMonth && date("j") > $targetDay)) {
+    $nextOccurrenceYear = $currentYear + 1; // Go to the next year if the target date has passed
+} else {
+    $nextOccurrenceYear = $currentYear;
+}
+
+$nextOccurrenceMonth = date("M", strtotime("$nextOccurrenceYear-$targetMonth-$targetDay"));
+$nextOccurrenceDay = date("d", strtotime("$nextOccurrenceYear-$targetMonth-$targetDay"));
+$price = $price; 
+$training=$training;
+// Construct the URL with query parameters
+$meetingDetailsURL = "meeting-details.php?month=" . $nextOccurrenceMonth . "&day=" . $nextOccurrenceDay . "&price=" . $price ."&training=" . $training;
+?>
+
+<h6><?php echo $nextOccurrenceMonth; ?> <span><?php echo $nextOccurrenceDay; ?></span></h6>
+
+                    <!-- <h6>Nov <span>26</span></h6> -->
+                   
                   </div>
                   <a href="meeting-details.html"><h4>3 Month Training</h4></a>
                   <p>Training Days:12<br>Project Devlopment Days:78</p>
@@ -407,12 +599,19 @@ document.addEventListener('DOMContentLoaded', function() {
                       
                       <div class="article-body">
                         
-                          <a href="meeting-details.html" class="read-more">
+                          <!-- <a href="<?php echo $meetingDetailsURL; ?>"class="read-more">
                   Know more <span class="sr-only">about this is some title</span>
                   <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
                   </svg>
-                </a>
+                </a> -->
+                <form action="meeting-details.php" method="post">
+    <input type="hidden" name="month" value="<?php echo $nextOccurrenceMonth; ?>">
+    <input type="hidden" name="day" value="<?php echo $nextOccurrenceDay; ?>">
+    <input type="hidden" name="price" value="<?php echo $price; ?>">
+    <input type="hidden" name="training" value="<?php echo $training; ?>">
+    <input type="submit" value="Know more" class="read-more-button" style="color: #F5A425">
+</form>
                       </div>
                   </div>
               </article>
@@ -425,12 +624,43 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="thumb">
                   <div class="price">
                     <span>&#8377; 35000/-</span>
+                    <?php
+$price = '&#8377; 35000/-'; // This is the data you want to send to meetingdetails.php
+?>
                   </div>
                   <a href="meeting-details.html"><img src="assets/images/Training-img/Tra-4.jpeg" alt="Student Training"></a>
                 </div>
                 <div class="down-content">
                   <div class="date">
-                    <h6>Nov <span>30</span></h6>
+                  <?php
+$training = ' 6 Month Training'; // This is the data you want to send to meetingdetails.php
+?>
+                    <!-- <h6>Nov <span>30</span></h6> -->
+                    
+                    <?php
+$currentMonth = date("n"); // Get the current month as a number (1-12)
+$currentYear = date("Y");   // Get the current year
+
+// Set the target month and day for 1-month training
+$targetMonth = 11; // November
+$targetDay = 25;
+
+// Calculate the next occurrence of the target date
+if ($currentMonth > $targetMonth || ($currentMonth == $targetMonth && date("j") > $targetDay)) {
+    $nextOccurrenceYear = $currentYear + 1; // Go to the next year if the target date has passed
+} else {
+    $nextOccurrenceYear = $currentYear;
+}
+
+$nextOccurrenceMonth = date("M", strtotime("$nextOccurrenceYear-$targetMonth-$targetDay"));
+$nextOccurrenceDay = date("d", strtotime("$nextOccurrenceYear-$targetMonth-$targetDay"));
+$price = $price; 
+$traing = $training;
+// Construct the URL with query parameters
+$meetingDetailsURL = "meeting-details.php?month=" . $nextOccurrenceMonth . "&day=" . $nextOccurrenceDay . "&price=" . $price . "&training=" . $training;
+?>
+<h6><?php echo $nextOccurrenceMonth; ?> <span><?php echo $nextOccurrenceDay; ?></span></h6>
+
                   </div>
                   <a href="meeting-details.html"><h4>6 Month Training</h4></a>
                   <p>Training Days:28<br>Project Devlopment Days:155</p>
@@ -440,12 +670,19 @@ document.addEventListener('DOMContentLoaded', function() {
                       
                       <div class="article-body">
                         
-                          <a href="meeting-details.html" class="read-more">
+                          <!-- <a href="<?php echo $meetingDetailsURL; ?>" class="read-more">
                   Know more <span class="sr-only">about this is some title</span>
                   <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
                   </svg>
-                </a>
+                </a> -->
+                <form action="meeting-details.php" method="post">
+    <input type="hidden" name="month" value="<?php echo $nextOccurrenceMonth; ?>">
+    <input type="hidden" name="day" value="<?php echo $nextOccurrenceDay; ?>">
+    <input type="hidden" name="price" value="<?php echo $price; ?>">
+    <input type="hidden" name="training" value="<?php echo $training; ?>">
+    <input type="submit" value="Know more" class="read-more-button" style="color: #F5A425">
+</form>
                       </div>
                   </div>
               </article>
@@ -455,6 +692,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </div>
   </section>
@@ -1177,12 +1415,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     <!--1000 Rs strts-->
-    <section class="section bgcolor1" style="background-color: #f5a425;">
+    <section class="section bgcolor1" style="background-color: #f5a425; padding: 3rem;">
       <div class="container" >
           <a href="#">
           <div class="row callout">
               <div class="col-md-4 text-center">
-                  <h3>1000 &#x20B9</h3>
+                  <h3 style="font-weight: bold;">&#x20B9 1000/- </h3>
                   <h4>Start your awesome course today!</h4>
               </div><!-- end col -->
     
