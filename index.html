@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link href="FB/main.css" rel="stylesheet">
+    
+</head>
+<body>
+<!----
+  <div class="main-button-purple" id="myBtn">
+    <p>Download PDF</p>
+           
+    <div id="myModal" class="modal">
+
+      <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2> Form</h2>
+          <form action="intern.php" method="post">
+            <h5 style="color: green;">
+              name: <input type="text" name="Iname"><br><br>
+                email:<input type="text" name="Iemail"><br><br>
+                Phone no:<input type="text" name="Iphno"><br><br>
+              <input type="submit" value="Submit">
+            </h5>
+          </form>
+      </div>
+
+  </div>-->
+
+  <!--------------------------------------------------------------------------------->
+
+  <div class="drove">
+    <form action="verification.php">
+      <h1>Firebase Phone verification In PHP</h1>
+      <div class="formcontainer">
+      <hr/>
+      <div class="container">
+  <form action="intern.php" method="post">  
+      <label for="name"><strong>Name:</strong></label>
+        <input type="text" id="name" name="Iname" required><br><br>
+        <label for="email"><strong>email:</strong></label>
+        <input type="text" id="email" name="Iemail" required><br><br>
+        <label for="uname"><strong>Phone Number:</strong></label>
+        <input type="text" id="number" placeholder="Enter phone number" name="uname" required> 
+    </form>
+      </div>
+      <div id="recaptcha-container"></div>
+      <button type="button" onclick="phoneAuth();">Send Otp</button>
+    
+    </form>
+
+    <form>
+         <div class="container">
+        <label for="uname"><strong>verification number</strong></label>
+        <input type="text" id="verificationCode" placeholder="Enter otp" name="uname" required>
+        
+         </div>
+        <button type="button" onclick="codeverify();">submit</button>
+    </form>
+</div>
+
+
+
+
+    <script type='text/javascript' src='popupform/firebase.js'></script>
+    <script src= "https://www.gstatic.com/firebasejs/10.5.0/firebase.js"></script>
+    <script src= "https://www.gstatic.com/firebasejs/10.5.0/firebase-analytics.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase.js"></script>
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyA9PlXPs0nKb0Ef338rP5-MmGsqz0gRbUE",
+      authDomain: "otp-v-4dad2.firebaseapp.com",
+      projectId: "otp-v-4dad2",
+      storageBucket: "otp-v-4dad2.appspot.com",
+      messagingSenderId: "1002501064669",
+      appId: "1:1002501064669:web:f67bf1619caace67e01834",
+      measurementId: "G-Y3B1QVHS54"
+    };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+     firebase.analytics();
+</script>
+
+    <script src="Popup/popupform.js"></script>
+    <script src="FB/firebase.js"></script>
+</body>
+</html>
