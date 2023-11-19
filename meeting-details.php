@@ -100,6 +100,10 @@ https://templatemo.com/tm-569-edu-meeting
 if (isset($_POST["training"])) {
     $training = $_POST["training"];
 }
+else{
+  $training="1 month Training";
+
+}
 ?>
 <h2>About  <?php echo  $training; ?></h2>
           <!-- <h2> ABOUT OFFLINE INTERNSHIP PROGRAM</h2> -->
@@ -121,6 +125,10 @@ if (isset($_POST["training"])) {
 if (isset($_POST["price"])) {
     $price = $_POST["price"];
 }
+else{
+  $price="&#8377 3000";
+
+}
 ?>
                     <!-- <span>$14.00</span> -->
                     <span ><?php echo $price; ?></span>
@@ -130,7 +138,9 @@ if (isset($_POST["price"])) {
 if (isset($_POST["month"]) && isset($_POST["day"])) {
     $nextOccurrenceMonth = $_POST["month"];
     $nextOccurrenceDay = $_POST["day"];
-}
+}else{$nextOccurrenceMonth = "Nov";
+  $nextOccurrenceDay = "11";}
+
 ?>
 <h6><?php echo $nextOccurrenceMonth; ?> <span><?php echo $nextOccurrenceDay; ?></span></h6>
                     <!-- <h6>Nov <span>12</span></h6> -->
@@ -203,9 +213,9 @@ if (isset($_POST["month"]) && isset($_POST["day"])) {
                 </div>
             </div></div></div>
             <div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner vc_custom_1623993845696"><div class="wpb_wrapper"><h5 style="font-size: 14px;color: #181616;line-height: 10px;text-align: left" class="vc_custom_heading font-weight-medium vc_custom_1612766876148"><a href="https://www.kaashivinfotech.com/free-internship-for-eee-students-in-chennai/" target="_blank"> Iternship for IT students in Nagpur</a></h5><div style="font-size: 24px;color: #dd3333;line-height: 30px;text-align: left" class="vc_custom_heading display-inline-block font-weight-regular vc_custom_1612938372135">Interested in our Internship under - IT</div><h3 style="font-size: 33px;color: #1a1057;line-height: 46px;text-align: left" class="vc_custom_heading font-weight-bold vc_custom_1612762124577">Apply for internship - Contact Us</h3><div style="font-size: 15px;color: #767676;line-height: 24px;text-align: left" class="vc_custom_heading font-weight-regular vc_custom_1612938470814">Thank you for selecting our 100% practical and interactive online IT internship programs, specially designed for IT engineering students. As an intern, you will acquire advanced technological expertise. Welcome to Asterisc Technocrat, the premier destination for IT internship opportunities. Openings for IT engineering student interns for the years 2021, 2022, and 2023 are now open for applications.</div><div class="vc_row wpb_row vc_inner vc_row-fluid background-position-left-top vc_custom_1616167823519 vc_row-has-fill"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner vc_custom_1554362762713"><div class="wpb_wrapper"><h4 style="font-size: 17px;color: #080056;line-height: 30px;text-align: left" class="vc_custom_heading font-weight-semibold vc_custom_1612938512453"><a href="https://www.technocrat.asterisc.in/internship.html">How to apply for Internship</a></h4><div style="font-size: 15px;color: #000bed;line-height: 24px;text-align: left" class="vc_custom_heading font-weight-regular vc_custom_1602551008231"><a href="https://www.technocrat.asterisc.in/internship.html">Apply for internship<br>
-    ( https://www.technocrat.asterisc.in/internship.html )</a></div></div></div></div></div><div class="vc_row wpb_row vc_inner vc_row-fluid background-position-left-top vc_custom_1616167870101 vc_row-has-fill"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner vc_custom_1554362762713"><div class="wpb_wrapper"><h4 style="font-size: 17px;color: #0b0056;line-height: 30px;text-align: left" class="vc_custom_heading font-weight-semibold vc_custom_1601719160908">Contact Number / Whatsapp Number</h4><div style="font-size: 15px;color: #111111;line-height: 24px;text-align: left" class="vc_custom_heading font-weight-regular vc_custom_1601719076731">Mobile 1 : 7744822228<br>
-    Mobile 2 : 7744822228<br>
-    Mobile 3 : 7744822228</div></div></div></div></div><div class="vc_row wpb_row vc_inner vc_row-fluid background-position-left-top vc_custom_1616167917389 vc_row-has-fill"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner vc_custom_1554362762713"><div class="wpb_wrapper"><h4 style="font-size: 17px;color: #0b0056;line-height: 30px;text-align: left" class="vc_custom_heading font-weight-semibold vc_custom_1601719185892">Email ID</h4><div style="font-size: 15px;color: #0025f7;line-height: 24px;text-align: left" class="vc_custom_heading font-weight-regular vc_custom_1601719328836"><a href="mailto:kaashiv.info@gmail.com">hello@asterisc.in<br>
+     https://www.technocrat.asterisc.in/internship.html </a></div></div></div></div></div><div class="vc_row wpb_row vc_inner vc_row-fluid background-position-left-top vc_custom_1616167870101 vc_row-has-fill"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner vc_custom_1554362762713"><div class="wpb_wrapper"><h4 style="font-size: 17px;color: #0b0056;line-height: 30px;text-align: left" class="vc_custom_heading font-weight-semibold vc_custom_1601719160908">Contact Number / Whatsapp Number</h4><div style="font-size: 15px;color: #111111;line-height: 24px;text-align: left" class="vc_custom_heading font-weight-regular vc_custom_1601719076731">Mobile 1 : +917744822228<br>
+    Mobile 2 : +917744822228<br>
+    Mobile 3 : +917744822228</div></div></div></div></div><div class="vc_row wpb_row vc_inner vc_row-fluid background-position-left-top vc_custom_1616167917389 vc_row-has-fill"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner vc_custom_1554362762713"><div class="wpb_wrapper"><h4 style="font-size: 17px;color: #0b0056;line-height: 30px;text-align: left" class="vc_custom_heading font-weight-semibold vc_custom_1601719185892">Email ID</h4><div style="font-size: 15px;color: #0025f7;line-height: 24px;text-align: left" class="vc_custom_heading font-weight-regular vc_custom_1601719328836"><a href="mailto:kaashiv.info@gmail.com">hello@asterisc.in<br>
     </a></div></div></div></div></div></div></div></div>
     <div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner vc_custom_1623993854886"><div class="wpb_wrapper">
       <div class="wpb_single_image wpb_content_element vc_align_left">
@@ -251,7 +261,7 @@ if (isset($_POST["month"]) && isset($_POST["day"])) {
                     <div class="col-lg-4">
                       <div class="book now">
                         <h5>Book Now</h5>
-                        <p>7744822228<br>7744822228</p>
+                        <p>+917744822228<br>+917744822228</p>
                       </div>
                     </div>
                     <div class="col-lg-12">
