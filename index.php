@@ -286,7 +286,7 @@ document.addEventListener('DOMContentLoaded', function() {
              <li><a href="#">Career path exploration </a></li>
             </ul>
             <div class="main-button-purple" id="myBtn">
-              <p><a href="index.html">Download PDF</a> </p>
+              <p><a href="indexx.html">Download PDF</a> </p>
               
             </div>
           </div>

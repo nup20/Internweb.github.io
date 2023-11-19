@@ -4,6 +4,14 @@ body {
     justify-content: center;
     font-family: Roboto, Arial, sans-serif;
     font-size: 15px;
+   /*
+    background-image: url(../assets/images/lastdoodle.jpg);
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;*/
+   
+
 }
 
 form {
@@ -21,7 +29,7 @@ input[type=password] {
 }
 
 button {
-    background-color: #8ebf42;
+    background-color: #bf42ac;
     color: white;
     padding: 14px 0;
     margin: 10px 0;
@@ -32,7 +40,7 @@ button {
 
 h1 {
     text-align: center;
-    fone-size: 18;
+    font-size: 18;
 }
 
 button:hover {
